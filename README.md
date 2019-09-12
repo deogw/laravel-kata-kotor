@@ -8,7 +8,9 @@
 
 </p>
 
-> Package laravel untuk filter dan masking (sensor) kata kasar atau jorok. Terinspirasi oleh [Laravel Profanity Filter](https://github.com/Askedio/laravel-profanity-filter)
+> Package laravel untuk filter dan masking (sensor) kata kasar atau jorok. 
+>
+>Terinspirasi oleh [Laravel Profanity Filter](https://github.com/Askedio/laravel-profanity-filter)
 
 ## Install
 
