@@ -1,0 +1,56 @@
+{
+    "name": "deogw/laravel-kata-kotor",
+    "description": "🚫 Package laravel untuk filter kata kasar atau jorok on the fly",
+    "keywords": [
+        "kata-kotor-laravel",
+        "filter-kata-kotor",
+        "kata-kotor-indonesia",
+        "filter-kata-jorok"
+    ],
+    "homepage": "https://github.com/deogw/laravel-kata-kotor",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Deo",
+            "email": "deowibawa@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "5.7.*|5.8.*|6.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.8.*",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Deogw\\KataKotorLaravel\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Deogw\\KataKotorLaravel\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Deogw\\KataKotorLaravel\\Providers\\KataKotorServiceProvider"
+            ],
+            "aliases": {
+                "KataKotorLaravel": "Deogw\\KataKotorLaravel\\Facades\\KataKotorFacade"
+            }
+        }
+    }
+}
