@@ -16,16 +16,45 @@
 composer require deogw/laravel-kata-kotor
 ```
 
+Khusus versi Laravel < 5.5 karena belum support fitur auto discover, maka harus mendaftarkan Service Provider dan Facade secara manual.
+
+Tambahkan Service Provider dan Facade pada `config.app`
+
+``` php
+'providers' => [
+
+    Deogw\KataKotorLaravel\Providers\KataKotorServiceProvider::class,
+
+]
+```
+
+``` php
+'aliases' => [
+
+    'KataKotor' => Deogw\KataKotorLaravel\Facades\KataKotorFacade::class,
+
+]
+```
+
+
 ## Usage
 
 ```sh
-WIP
+use KataKotor;
+
+KataKotor::check("Dasar kau bajingan !"); // Return Boolean : True
+
+KataKotor::masking("Fucking Bastard"); // Return String : F*ck*ng B*st*rd
+
+KataKotor::masking("Fucking Bastard", "x"); // Return String : Fxckxng Bxstxrd
 ```
 
 ## Run tests
 
 ```sh
-WIP
+.\vendor\bin\phpunit.bat
+or
+composer test
 ```
 
 ## Author
